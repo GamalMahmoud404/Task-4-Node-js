@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My app</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+    <link rel="stylesheet" href="/css/all.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="fontawesome-free-6.6.0-web/css/all.css">
+
+</head>
+
+<body>
+    <div>{{>header}}</div>
+    
+    <div class="container mt-5">
+        <div class="cont-0">
+            <div class="cont-1">
+                
+                <p class="p-title">{{page}}</p>
+
+                <form class="form1 d-flex" id="allform">
+                    <input class="input-s col-7" autocomplete="off" type="text" placeholder="Enter address"
+                        id="mySddress" class="searchtxt">
+                    <button class="searchbtn col-5">search</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <form class="form-2" id="formBody">
+            <p class="pAllItems" id="error"></p>
+            <p class="pAllItems" id="country" class="bg-danger"></p>
+            <p class="pAllItems" id="longtitude"></p>
+            <p class="pAllItems" id="latitude"></p>
+            <p class="pAllItems" id="Current"></p>
+            <p class="pAllItems" id="temp"></p>
+        </form>
+    </div>
+
+
+    <div>{{>footer}}</div>
+
+
+
+
+
+    <script src="fontawesome-free-6.6.0-web/js/all.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <script src="js/scribt.js"></script>
+
+</body>
+
+</html>
