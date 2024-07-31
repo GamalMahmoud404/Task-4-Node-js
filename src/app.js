@@ -41,6 +41,7 @@ app.get("/weather", (req, res) => {
                         console.log(foreData)
                         res.send({
                             country: foreData.country,
+                            city : data.city ,
                             longtitude: data.longtitude,
                             latitude: data.latitude,
                             condition: foreData.condition,

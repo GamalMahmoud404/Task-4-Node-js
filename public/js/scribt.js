@@ -18,6 +18,7 @@ closeMenu.addEventListener('click', function () {
 const allform = document.querySelector("#allform")
 const errorp = document.querySelector("#error")
 const country = document.querySelector("#country")
+const city = document.querySelector("#city")
 const longtitude = document.querySelector("#longtitude")
 const latitude = document.querySelector("#latitude")
 const Current = document.querySelector("#Current")
@@ -39,6 +40,7 @@ var weatherFunction = async () => {
 
     errorp.innerHTML = ""
     country.innerHTML = ""
+    city.innerHTML = ""
     longtitude.innerHTML = ""
     latitude.innerHTML = ""
     Current.innerHTML = ""
@@ -49,17 +51,20 @@ var weatherFunction = async () => {
     } else {
       country.innerHTML = `<p class="p-temp-a">` + "Country :" + `</p>` + `<p class="p-temp-v">` + allData.country + `</p>`
       setTimeout(() => {
-        longtitude.innerHTML = `<p class="p-temp-a">` + "Longitude :" + `</p>` + `<p class="p-temp-v">` + allData.longtitude.toFixed(3) + `</p>`
+        city.innerHTML = `<p class="p-temp-a">` + "City :" + `</p>` + `<p class="p-temp-v">` + allData.city + `</p>`
       }, "500");
       setTimeout(() => {
-        latitude.innerHTML = `<p class="p-temp-a">` + "Latitude :" + `</p>` + `<p class="p-temp-v">` + allData.latitude.toFixed(3) + `</p>`
+        longtitude.innerHTML = `<p class="p-temp-a">` + "Longitude :" + `</p>` + `<p class="p-temp-v">` + allData.longtitude.toFixed(3) + `</p>`
       }, "1000");
       setTimeout(() => {
-        Current.innerHTML = `<p class="p-temp-a">` + "Current weather :" + `</p>` + `<p class="p-temp-v">` + allData.condition + `</p>`
+        latitude.innerHTML = `<p class="p-temp-a">` + "Latitude :" + `</p>` + `<p class="p-temp-v">` + allData.latitude.toFixed(3) + `</p>`
       }, "1500");
       setTimeout(() => {
-        temp.innerHTML = `<p class="p-temp-a">` + "Temperature :" + `</p>` + `<p class="p-temp-v">` + allData.temp + " °c" + `</p>`
+        Current.innerHTML = `<p class="p-temp-a">` + "Current weather :" + `</p>` + `<p class="p-temp-v">` + allData.condition + `</p>`
       }, "2000");
+      setTimeout(() => {
+        temp.innerHTML = `<p class="p-temp-a">` + "Temperature :" + `</p>` + `<p class="p-temp-v">` + allData.temp + " °c" + `</p>`
+      }, "2500");
     }
   } catch (e) {
     console.log(e)

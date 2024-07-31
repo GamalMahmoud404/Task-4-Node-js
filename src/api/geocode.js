@@ -13,7 +13,8 @@ const geocodefun = (location, callback) => {
         } else {
             callback(undefined, {
                 longtitude: response.body.features[0].center[0],
-                latitude: response.body.features[0].center[1]
+                latitude: response.body.features[0].center[1],
+                city : response.body.features[0].text
             })
         }
     })
